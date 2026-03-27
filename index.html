@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thợ Trade Vàng Bryan | KÈM TRADE 1:1 TẠI HÀ NỘI – ĐẾN KHI RA TIỀN THÌ THÔI</title>
+    <style>
+        /* CSS Reset & Basic Styles */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        :root {
+            --primary-color: #ffd700; /* Vàng */
+            --secondary-color: #0d1b2a; /* Xanh đậm cho Header/Footer */
+            --text-color: #1b263b;
+            --light-bg: #f4f4f9;
+            --white: #ffffff;
+            --red-sl: #ff4d4d;
+            --blue-tp: #4da6ff;
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Utility Classes */
+        .btn-cta {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        header .btn-cta-small {
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: bold;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #hero h2 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin-bottom: 40px;
+        }
+
+        #hero .hero-img-container {
+            margin-bottom: 40px;
+        }
+
+        #hero .hero-img-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        /* Problem Section */
+        #problem {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        #problem .problem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        #problem .problem-item {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid var(--red-sl);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #problem .problem-icon {
+            font-size: 2.5rem;
+            color: var(--red-sl);
+        }
+
+        /* Solution Section */
+        #solution {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        #solution .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #solution img {
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Proof Section (Image Galleries) */
+        #proof {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .gallery-block {
+            margin-bottom: 60px;
+        }
+
+        .gallery-block h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* special proof grid */
+        .result-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .account-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* Benefits Section */
+        #benefits {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        #benefits .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        #benefits .benefit-item {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #benefits .benefit-icon {
+            font-size: 3rem;
+            color: var(--blue-tp);
+            margin-bottom: 20px;
+        }
+
+        /* Register Section */
+        #register {
+            padding: 100px 0;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        /* Disclaimer Section */
+        #disclaimer {
+            padding: 60px 0;
+            background-color: #333;
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #888;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            header .btn-cta-small {
+                display: none;
+            }
+
+            #hero {
+                padding: 140px 0 80px;
+            }
+
+            #hero h1 {
+                font-size: 2.2rem;
+            }
+
+            #hero h2 {
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .result-gallery,
+            .account-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="image_9.png" alt="Logo Thợ Trade Vàng Bryan">
+            </div>
+            <a href="#register" class="btn-cta-small">ĐĂNG KÝ NGAY</a>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>THỢ TRADE VÀNG BRYAN | KÈM TRADE <span class="highlight">1:1 TẠI HÀ NỘI</span></h1>
+            <h2>KÈM <span class="highlight">1:1</span> ĐẾN KHI RA TIỀN THÌ THÔI</h2>
+            <div class="hero-img-container">
+                <img src="image_1.png" alt="Lớp học Thợ Trade Vàng Bryan">
+            </div>
+            <p>Bạn không cần giỏi hơn. Bạn chỉ cần đúng hệ thống – đúng quản lý vốn – đúng kỷ luật.</p>
+            <a href="#register" class="btn-cta">ĐĂNG KÝ THAM GIA NGAY!</a>
+        </div>
+    </section>
+
+    <section id="problem">
+        <div class="container">
+            <h2 class="section-title">NẾU BẠN NẰM TRONG 90% TRADER HIỆN TẠI!</h2>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <div class="problem-icon">❌</div>
+                    <p>Học rất nhiều nhưng không biết áp dụng</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">❌</div>
+                    <p>Xem kèo lung tung → mất phương hướng</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">❌</div>
+                    <p>Trade một mình → tâm lý yếu, dễ sai lệnh</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">❌</div>
+                    <p>Không có người sửa lỗi → lặp lại sai lầm</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">⚠️</div>
+                    <p>Bạn không thiếu kiến thức – Bạn thiếu người đi cùng khi trade thật</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution">
+        <div class="container">
+            <h2 class="section-title">GIẢI PHÁP: KÈM TRADE <span class="highlight">1:1 THỰC CHIẾN</span></h2>
+            <img src="image_3.png" alt="Kèm 1:1 online/offline thực chiến" style="max-width: 600px;">
+            <p>Hỗ trợ trực tiếp tại Hà Nội (offline) hoặc kèm online mỗi ngày theo phiên Âu – Mỹ.</p>
+            <p>Master trade cùng bạn – sửa từng lệnh – chỉnh từng mindset.</p>
+            <a href="#register" class="btn-cta">X5 TÀI KHOẢN VỚI SIÊU SCALPING</a>
+        </div>
+    </section>
+
+    <section id="proof">
+        <div class="container">
+            <h2 class="section-title">HÃY XEM NHỮNG KẾT QUẢ MÀ CHÚNG TÔI ĐÃ LÀM</h2>
+
+            <div class="gallery-block">
+                <h3>Hội Thảo & Kèm Thực Chiến Offline</h3>
+                <div class="image-gallery">
+                    <div class="gallery-item"><img src="image_0.png" alt="Hội thảo thực chiến 1"></div>
+                    <div class="gallery-item"><img src="image_1.png" alt="Hội thảo thực chiến 2"></div>
+                    <div class="gallery-item"><img src="image_2.png" alt="Hội thảo thực chiến 3"></div>
+                </div>
+            </div>
+
+            <div class="gallery-block">
+                <h3>Lịch Sử Giao Dịch Siêu Scalping</h3>
+                <p style="text-align:center; color:#777; margin-bottom: 20px;">Lợi nhuận đều đặn từ phương pháp siêu lướt sóng</p>
+                <div class="image-gallery result-gallery">
+                    <div class="gallery-item"><img src="image_4.png" alt="Lịch sử giao dịch 1"></div>
+                    <div class="gallery-item"><img src="image_5.png" alt="Lịch sử giao dịch 2"></div>
+                </div>
+            </div>
+
+            <div class="gallery-block">
+                <h3>Tăng Trưởng Tài Khoản Thực Tế</h3>
+                <p style="text-align:center; color:#777; margin-bottom: 20px;">Số liệu tài khoản thực tế sau khi được kèm</p>
+                <div class="image-gallery account-gallery">
+                    <div class="gallery-item"><img src="image_7.png" alt="Tài khoản tăng trưởng 1"></div>
+                    <div class="gallery-item"><img src="image_8.png" alt="Tài khoản tăng trưởng 2"></div>
+                </div>
+            </div>
+            
+            <div class="gallery-block" style="text-align: center; margin-top: 40px;">
+              <h3>Ví dụ về lợi nhuận:</h3>
+              <div class="gallery-item" style="max-width: 350px; margin: 0 auto;"><img src="image_6.png" alt="Ví dụ lợi nhuận"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="benefits">
+        <div class="container">
+            <h2 class="section-title">BẠN SẼ NHẬN ĐƯỢC GÌ?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏆</div>
+                    <p>Master kèm 1: 1 đến khi bạn tự giao dich có lãi</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛠️</div>
+                    <p>Nhận toàn bộ Công Cụ Độc Quyền, chỉ báo và hệ thống giao dịch độc quyền</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <p>Hỗ trợ A-Z Setup mọi thứ và cầm tay chỉ việc đến khi bạn thành thạo</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎓</div>
+                    <p>Học 1:1 Phương Pháp không mất phí đến khi tự ra quyết định giao dịch</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <p>Cashback lên đến 10$ / Lot nếu bạn giao dịch nhiều và có vốn lớn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register">
+        <div class="container">
+            <h2 class="section-title">BẮT ĐẦU CHUẨN HÓA TRADING HÔM NAY</h2>
+            <p>Bạn là nhân viên văn phòng, chủ doanh nghiệp có vốn nhàn rỗi lớn, người đã từng trade thua lỗ...</p>
+            <p>Hãy để Thợ Trade Bryan kèm bạn đến khi ra tiền.</p>
+            <a href="https://forms.gle/XXXXX" class="btn-cta" target="_blank">ĐĂNG KÝ THAM GIA NGAY (18 SLOT)</a>
+        </div>
+    </section>
+
+    <section id="disclaimer">
+        <div class="container">
+            <p>Giao dịch CFD tiềm ẩn rủi ro cao và có thể dẫn đến thua lỗ; nội dung chia sẻ trong chương trình mang tính giáo dục, không phải khuyến nghị đầu tư, và kết quả giao dịch phụ thuộc vào quyết định cũng như khả năng quản lý rủi ro của mỗi cá nhân.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 THỢ TRADE Bryan. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
